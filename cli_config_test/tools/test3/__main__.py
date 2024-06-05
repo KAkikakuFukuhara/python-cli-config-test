@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import __add_rootpath
 else:
     from . import __add_rootpath
-from cli_config_test.cli.tools import add_arguments
+from cli_config_test.cli.tools.test3 import add_arguments
 
 
 def main(*args, **kwargs):

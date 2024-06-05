@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 import pprint
 
 import __add_rootpath
-from cli_config_test.cli.tools.test2_cli import add_arguments
+from cli_config_test.cli.tools.test2 import add_arguments
 from cli_config_test import lib as cli_config_test
 
 

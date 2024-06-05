@@ -1,8 +1,11 @@
 from argparse import ArgumentParser
 
-import __add_rootpath
-from cli_config_test.cli.main_cli import add_arguments
-from cli_config_test.tools.__main__ import main as main_
+if __name__ == "__main__":
+    import __add_rootpath
+else:
+    from . import __add_rootpath
+from cli_config_test.cli import add_arguments
+from cli_config_test.tools import main as main_
 
 
 def main(*args, **kwargs):
