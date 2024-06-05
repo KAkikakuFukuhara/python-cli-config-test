@@ -12,13 +12,13 @@ def add_arguments(parser: ArgumentParser) -> ArgumentParser:
 
 
 def add_test1(subparsers: _SubParsersAction) -> ArgumentParser:
-    from . import cli_test1
+    from . import test1_cli
     parser: ArgumentParser = subparsers.add_parser("test1")
-    parser: ArgumentParser = cli_test1.add_arguments(parser)
+    parser: ArgumentParser = test1_cli.add_arguments(parser)
 
     def callback(*args, **kwargs):
-        from cli_config_test.tools import test1_1
-        test1_1.main(**kwargs)
+        from ...tools import test1_2
+        test1_2.main(**kwargs)
 
     parser.set_defaults(callback=callback)
 
@@ -26,12 +26,12 @@ def add_test1(subparsers: _SubParsersAction) -> ArgumentParser:
 
 
 def add_test2(subparsers: _SubParsersAction) -> ArgumentParser:
-    from . import cli_test1
+    from . import test2_cli
     parser: ArgumentParser = subparsers.add_parser("test2")
-    parser: ArgumentParser = cli_test1.add_arguments(parser)
+    parser: ArgumentParser = test2_cli.add_arguments(parser)
 
     def callback(*args, **kwargs):
-        from cli_config_test.tools import test2
+        from ...tools import test2
         test2.main(**kwargs)
 
     parser.set_defaults(callback=callback)

@@ -5,12 +5,8 @@ from argparse import ArgumentParser
 import pprint
 
 import __add_rootpath
+from cli_config_test.cli.tools.test2_cli import add_arguments
 from cli_config_test import lib as cli_config_test
-
-
-def add_arguments(parser: ArgumentParser) -> ArgumentParser:
-    parser.add_argument("input", type=str, help="input path")
-    return parser
 
 
 def main(*args, **kwargs):
