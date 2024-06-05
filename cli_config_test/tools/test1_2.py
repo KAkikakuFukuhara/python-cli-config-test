@@ -3,7 +3,7 @@
 from argparse import ArgumentParser
 
 import __add_rootpath
-from cli_config_test.cli.tools.test1_cli import add_arguments
+from cli_config_test.cli.tools.test1 import add_arguments
 
 
 def main(*args, **kwargs):
